@@ -1,0 +1,31 @@
+@import "../../GlobalStyles/GlobalStyles.scss";
+
+.button {
+  display: inline-block;
+  padding: 10px 31px;
+  border-radius: 100rem;
+  font-family: $font;
+  line-height: calc(27.5 / 16);
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  text-align: center;
+  white-space: nowrap;
+  text-transform: uppercase;
+  &--primary {
+    font-weight: 600;
+    background-color: $primary-color;
+    color: white;
+  }
+  &--outline {
+    background-color: transparent;
+    color: $primary-color;
+    font-weight: 500;
+    border: 1px solid;
+  }
+  &--rounded {
+    border-radius: 10px;
+    padding: 10px 31px;
+  }
+}

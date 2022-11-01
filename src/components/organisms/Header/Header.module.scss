@@ -1,0 +1,28 @@
+@import "../../GlobalStyles/GlobalStyles.scss";
+
+.header {
+  margin-top: 46px;
+  &-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 100px;
+  }
+  &-menuic {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1px) and (max-width: 428px) {
+  .header {
+    &-container {
+      margin: 49px 24px 95px;
+      padding-bottom: 0;
+    }
+    .menu {
+      display: none;
+    }
+    &-menuic {
+      display: inherit;
+    }
+  }
+}

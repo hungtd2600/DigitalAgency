@@ -1,0 +1,61 @@
+@import "../../GlobalStyles/GlobalStyles.scss";
+.custome {
+  padding-bottom: 136px;
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 180px;
+  }
+  &-content {
+    width: 100%;
+    max-width: 540px;
+  }
+  &-image {
+    min-width: 450px;
+  }
+  &-heading {
+    font-size: 64px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    line-height: calc(64 / 64);
+    color: $heading-color;
+  }
+  &-desc {
+    color: $text-color;
+    padding-right: 30px;
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: calc(27.5 / 18);
+    margin-bottom: 50px;
+    display: inline-block;
+    max-width: 525px;
+  }
+  &-arrow__mobile {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1px) and (max-width: 428px) {
+  .custome {
+    &-container {
+      flex-direction: column;
+    }
+    &-arrow {
+      display: none;
+    }
+    &-content {
+      text-align: center;
+    }
+    &-arrow__mobile {
+      display: inline-block;
+      transform: rotate(90deg);
+    }
+    &-heading {
+      text-align: center;
+    }
+    &-desc {
+      text-align: center;
+    }
+  }
+}

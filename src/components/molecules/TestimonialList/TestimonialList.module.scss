@@ -1,0 +1,19 @@
+.testimonial {
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0 15px;
+    margin-bottom: 176px;
+  }
+}
+
+@media only screen and (min-width: 1px) and (max-width: 428px) {
+  .testimonial {
+    &-list {
+      display: block;
+    }
+    &-item {
+      margin-bottom: 40px;
+    }
+  }
+}

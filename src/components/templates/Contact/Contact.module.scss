@@ -1,0 +1,57 @@
+@import "../../GlobalStyles/GlobalStyles.scss";
+.contact {
+  padding-bottom: 139px;
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 90px;
+  }
+  &-content {
+    width: 100%;
+    max-width: 361px;
+  }
+  &-image {
+    min-width: 450px;
+  }
+  &-heading {
+    font-size: 64px;
+    font-weight: 500;
+    margin-bottom: 16px;
+    line-height: calc(64 / 64);
+    color: $heading-color;
+  }
+  &-desc {
+    color: $text-color;
+    padding-right: 30px;
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: calc(27.5 / 18);
+    margin-bottom: 32px;
+    display: inline-block;
+    max-width: 360px;
+  }
+}
+@media only screen and (min-width: 1px) and (max-width: 428px) {
+  .contact {
+    &-container {
+      flex-direction: column;
+    }
+    &-heading {
+      text-align: center;
+    }
+    &-image {
+      display: none;
+    }
+    &-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &-desc {
+      text-align: center;
+      padding: 0;
+    }
+  }
+}

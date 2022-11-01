@@ -1,0 +1,67 @@
+@import "../../GlobalStyles/GlobalStyles.scss";
+.branding {
+  padding-bottom: 136px;
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 180px;
+  }
+  &-content {
+    width: 100%;
+    max-width: 540px;
+  }
+  &-image {
+    min-width: 450px;
+  }
+  &-heading {
+    font-size: 64px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    line-height: calc(64 / 64);
+    color: $heading-color;
+  }
+  &-desc {
+    color: $text-color;
+    padding-right: 30px;
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: calc(27.5 / 18);
+    margin-bottom: 50px;
+    display: inline-block;
+    max-width: 525px;
+  }
+}
+@media only screen and (min-width: 1px) and (max-width: 428px) {
+  .branding {
+    &-container {
+      flex-direction: column;
+    }
+    &-image {
+      order: 2;
+    }
+    &-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      img {
+        transform: rotate(90deg);
+      }
+    }
+    &-heading {
+      text-align: center;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 1;
+    }
+    &-desc {
+      text-align: center;
+      font-size: 16px;
+      line-height: calc(27.5 / 16);
+      max-width: 378px;
+      padding-right: 0;
+      margin-bottom: 24px;
+    }
+  }
+}

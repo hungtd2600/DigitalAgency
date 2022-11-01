@@ -1,0 +1,44 @@
+@import "../../GlobalStyles/GlobalStyles.scss";
+.compainies {
+  margin-bottom: 136px;
+  &-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-truted {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1;
+    color: #667085;
+    margin-bottom: 16px;
+  }
+  &-intro {
+    min-width: 915px;
+    min-height: 86px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+@media only screen and (min-width: 1px) and (max-width: 428px) {
+  .compainies {
+   margin-bottom: 88px;
+   &-intro {
+     min-width: auto;
+     min-height: auto;
+     gap: 0 20px;
+     padding: 0 24px;
+     img {
+       max-width: 80px;
+     }
+   }
+   &-truted {
+     font-size: 14px;
+     font-weight: 300;
+     line-height: 1;
+     margin: 24px 0;
+   }
+  }
+ }

@@ -1,0 +1,66 @@
+@import "../../GlobalStyles/GlobalStyles.scss";
+.footer {
+  &-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &-row1 {
+    display: flex;
+    justify-content: space-between;
+    gap: 0 178px;
+    margin-top: 105px;
+  }
+  &-row2 {
+    display: flex;
+    align-items: center;
+    margin-top: 110px;
+  }
+  &-column {
+    min-width: 85px;
+    max-width: 190px;
+  }
+  &-heading {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: calc(27.5 / 18);
+    color: $text-color;
+    margin-bottom: 32px;
+  }
+  &-link {
+    font-weight: 300px;
+    font-size: 16px;
+    line-height: 1;
+    color: $text-color;
+  }
+  &-links:last-child {
+    margin-bottom: 0;
+  }
+  &-item {
+    margin-bottom: 24px;
+  }
+  &-matheus {
+    font-weight: 300px;
+    font-size: 16px;
+    line-height: 1;
+    color: $text-color;
+    margin-bottom: 18px;
+  }
+  li {
+    list-style-type: none;
+  }
+}
+@media only screen and (min-width: 1px) and (max-width: 428px) {
+  .footer {
+    &-row1 {
+      flex-direction: column;
+    }
+    &-column {
+      text-align: center;
+    }
+    &-row2 {
+      margin-top: 82px;
+    }
+  }
+}

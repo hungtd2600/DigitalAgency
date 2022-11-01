@@ -1,0 +1,21 @@
+@import "../../GlobalStyles/GlobalStyles.scss";
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 0 50px;
+  list-style-type: none;
+  &-item {
+    a {
+      color: $text-color;
+    }
+  }
+}
+
+@media only screen and (min-width: 1px) and (max-width: 428px) {
+  .menu {
+    display: none;
+    &ic {
+      display: inherit;
+    }
+  }
+}
