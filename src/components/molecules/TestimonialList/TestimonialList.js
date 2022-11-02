@@ -7,14 +7,21 @@ import avatar2 from "../../../assets/images/testimonial-image2.png";
 import avatar3 from "../../../assets/images/testimonial-image3.png";
 const cx = classNames.bind(styles);
 
-const TestimonialList = () => {
-  return (
-    <div className={cx("testimonial-list")}>
-      <TestimonialItem name={"Andrew Rathore"} avatar={avatar1} />
-      <TestimonialItem name={"Vera Duncan"} avatar={avatar2} />
-      <TestimonialItem name={"Mark Smith"} avatar={avatar3} />
-    </div>
-  );
-};
+class TestimonialList extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = "";
+  }
+
+  render() {
+    return (
+      <div className={cx("testimonial-list")}>
+        <TestimonialItem name={"Andrew Rathore"} avatar={avatar1} />
+        <TestimonialItem name={"Vera Duncan"} avatar={avatar2} />
+        <TestimonialItem name={"Mark Smith"} avatar={avatar3} />
+      </div>
+    );
+  }
+}
 
 export default TestimonialList;
