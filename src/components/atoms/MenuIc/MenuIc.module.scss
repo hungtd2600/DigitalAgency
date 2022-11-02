@@ -1,0 +1,14 @@
+@import "../../GlobalStyles/GlobalStyles.scss";
+
+.header {
+  &-menuic {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1px) and (max-width: 428px) {
+  .header {
+    &-menuic {
+      display: inherit;
+    }
+  }
+}
