@@ -11,8 +11,7 @@ const TestimonialItem = (props) => {
       </div>
       <h3 className={cx("testimonial-name")}>{props.name}</h3>
       <p className={cx("testimonial-details")}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-        ullamcorper scelerisque mi, in malesuada felis malesuada vel.
+        {props.detail}
       </p>
     </div>
   );

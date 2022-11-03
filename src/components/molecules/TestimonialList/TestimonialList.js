@@ -1,18 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import classNames from "classnames/bind";
 import styles from "./TestimonialList.module.scss";
 import TestimonialItem from "../../atoms/TestimonialItem/TestimonialItem";
-import avatar1 from "../../../assets/images/testimonial-image1.png";
-import avatar2 from "../../../assets/images/testimonial-image2.png";
-import avatar3 from "../../../assets/images/testimonial-image3.png";
+import { getDataUser } from "../../../services/user";
 const cx = classNames.bind(styles);
 
 const TestimonialList = () => {
+  const [listUsers, setListUsers] = useState([]);
+  useEffect(() => {
+    const Users = getDataUser();
+    Users.then((res) => {
+      setListUsers(res);
+    });
+  });
+
   return (
     <div className={cx("testimonial-list")}>
-      <TestimonialItem name={"Andrew Rathore"} avatar={avatar1} />
-      <TestimonialItem name={"Vera Duncan"} avatar={avatar2} />
-      <TestimonialItem name={"Mark Smith"} avatar={avatar3} />
+      {listUsers.map((e) => {
+        return (
+          <TestimonialItem
+            key={e.id}
+            name={e.name}
+            avatar={e.srcImg}
+            detail={e.detail}
+          />
+        );
+      })}
     </div>
   );
 };
